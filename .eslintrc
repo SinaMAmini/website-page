@@ -1,0 +1,26 @@
+{
+    "root": true,
+    "ignorePatterns": ["projects/**/*"],
+    "overrides": [
+        {
+            "files": ["*.ts"],
+            "parserOptions": {
+                "project": ["tsconfig.json"],
+                "createDefaultProgram": true
+            },
+            "extends": ["prettier"],
+            "plugins": ["prettier"],
+            "rules": {
+                "@typescript-eslint/explicit-member-accessibility": ["error"],
+                "@typescript-eslint/explicit-function-return-type": ["error"],
+                "prettier/prettier": ["error", {"endOfLine": "auto"}]
+            }
+        },
+        {
+            "files": ["*.html"],
+            "extends": ["prettier"],
+            "plugins": ["prettier"],
+            "rules": {"prettier/prettier": ["error", {"endOfLine": "auto"}]}
+        }
+    ]
+}
