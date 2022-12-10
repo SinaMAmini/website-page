@@ -21,11 +21,11 @@ body {
     overflow: hidden;
 }
 
-h1 {
+.container  h1 {
     font-size: 2.5rem;
 }
 
-a {
+.container a {
     font-size:  1.5rem;
     color: hsl(180, 30%, 75%);
 }
@@ -37,4 +37,15 @@ a {
 
     inline-size: 2rem;
     block-size: 2rem;
+
+    border-radius: 50%;
+
+    background-color: hsl(0, 0%, 85%);
 }
+
+.github-logo a , .github-logo a img {
+    inline-size: 100%;
+    block-size: 100%;
+}
+
+
