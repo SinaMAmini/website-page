@@ -1,33 +1,14 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: hsl(0, 0%, 15%);
-    color: hsl(0, 0%, 85%);
+    background-color: hsl(0, 0%, 10%);
+    color: hsl(0, 0%, 90%);
 
     font-size: 62.5%;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    gap: 1rem;
-    overflow: hidden;
-}
-
-.container  h1 {
-    font-size: 2.5rem;
-}
-
-.container a {
-    font-size:  1.5rem;
-    color: hsl(180, 30%, 75%);
 }
 
 .github-logo {
@@ -43,9 +24,39 @@ body {
     background-color: hsl(0, 0%, 85%);
 }
 
-.github-logo a , .github-logo a img {
+.github-logo a,
+.github-logo a img {
     inline-size: 100%;
     block-size: 100%;
 }
 
+.container {
+    min-block-size: 100vh;
+    background: hsl(0, 0%, 10%) linear-gradient(to bottom, hsl(0, 0%, 10%) 100vh, hsl(240, 100%, 10%) 100%);
+}
 
+.screen {
+    block-size: 100vh;
+}
+
+.first-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.first-screen h1 {
+    font-size: 2.5rem;
+}
+
+.first-screen a {
+    font-size: 1.6rem;
+    color: hsl(180, 30%, 75%);
+}
+
+.first-screen p {
+    font-size: 1.6rem;
+    justify-self: flex-end;
+}
