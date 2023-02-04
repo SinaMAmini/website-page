@@ -1,13 +1,12 @@
 .sea-container {
     position: fixed;
     inset-block: 0;
-    inset-inline-end: -5rem;
+    inset-inline-end: -2rem;
 
-    inline-size: 30vw;
+    inline-size: 20vw;
 }
 
 .sea-container .base-wave {
-    background: url("/src/assets/images/BaseWave.svg") repeat-y;
     opacity: 0.7;
 
     position: absolute;
@@ -15,18 +14,19 @@
     inset-inline-end: 0;
 
     inline-size: 100%;
+
+    transition: opacity 200ms ease-in-out;
 }
 
 .sea-container .wave {
     opacity: 0.4;
 
     position: absolute;
-    inset-block-start: 0;
     inset-inline-end: 0;
 
     inline-size: 100%;
 
-    animation: simpleMovingWave 5000ms ease-in-out 0s infinite alternate;
+    animation: simple-moving-wave 10000ms ease-in-out 1000ms infinite;
 }
 
 .tsunami {
@@ -39,15 +39,42 @@
     animation: tsunami 25000ms linear 0ms infinite;
 }
 
-@keyframes simpleMovingWave {
+.simple-wave {
+    opacity: 0.4;
+
+    position: absolute;
+    inset-inline: 0;
+}
+
+@keyframes simple-moving-wave {
     0% {
+        opacity: 0.4;
+
         inset-block-start: 0;
+
+        transform: translateY(-100%);
+    }
+
+    98% {
+        opacity: 0.4;
+
+        inset-block-start: 100vh;
+
+        transform: translateY(0);
+    }
+
+    99% {
+        opacity: 0;
+
+        inset-block-start: 100vh;
 
         transform: translateY(0);
     }
 
     100% {
-        inset-block-start: 100vh;
+        opacity: 0;
+
+        inset-block-start: 0;
 
         transform: translateY(-100%);
     }
