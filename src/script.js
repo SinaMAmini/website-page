@@ -5,7 +5,7 @@ const singleWave = 'assets/images/SingleWave.svg';
 const viewHeight = seaContainer.clientHeight;
 const viewWidth = document.body.clientWidth;
 
-for (let i = 0; viewHeight - 0.52 * viewWidth * i >= 0; i++) {
+for (let i = 0; viewHeight - 0.5 * viewWidth * i >= 0; i++) {
     const newWave = document.createElement('img');
     newWave.src = singleWave;
     newWave.alt = 'wave';
@@ -20,7 +20,7 @@ for (let i = 0; viewHeight - 0.52 * viewWidth * i >= 0; i++) {
     newWave2.alt = 'wave';
 
     newWave2.classList.add('simple-wave');
-    newWave2.style.insetBlockStart = `${i * 0.52 * viewWidth - 100}px`;
+    newWave2.style.insetBlockStart = `${i * 0.5 * viewWidth - 100}px`;
     newWave2.style.transform = 'translateY(-50%)';
 
     seaContainer.appendChild(newWave2);
