@@ -26,7 +26,18 @@
 
     inline-size: 100%;
 
-    animation: simple-moving-wave 10000ms ease-in-out 1000ms infinite;
+    /* animation: simple-moving-wave 10000ms ease-in-out 1000ms infinite; */
+}
+
+.sea-container .wave-up-of-page {
+    opacity: 0.4;
+
+    position: absolute;
+    inset-inline-end: 0;
+
+    inline-size: 100%;
+
+    animation: wave-to-up-of-page 8000ms ease-in-out 1000ms infinite alternate;
 }
 
 .tsunami {
@@ -77,6 +88,24 @@
         inset-block-start: 0;
 
         transform: translateY(-100%);
+    }
+}
+
+@keyframes wave-to-up-of-page {
+    0% {
+        opacity: 0.4;
+
+        inset-block-start: 0;
+
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 0.4;
+
+        inset-block-start: 0;
+
+        transform: translateY(0);
     }
 }
 
