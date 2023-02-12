@@ -25,3 +25,15 @@ for (let i = 0; viewHeight - 0.5 * viewWidth * i >= 0; i++) {
 
     seaContainer.appendChild(newWave2);
 }
+
+const fires = document.querySelectorAll('.fire-container img');
+let i = 0;
+
+function changeFrame() {
+    fires[i].classList.remove('show');
+    if (i < 12) i++;
+    else i = 0;
+    fires[i].classList.add('show');
+}
+
+setInterval(() => changeFrame(), 100);
