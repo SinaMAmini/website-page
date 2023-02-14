@@ -30,3 +30,8 @@
 .fire-container img.show {
     display: block;
 }
+@media (max-width: 1020px) {
+    .fire-container {
+        display: none;
+    }
+}

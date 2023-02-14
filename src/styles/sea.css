@@ -159,3 +159,9 @@
         transform: translateY(-100%);
     }
 }
+
+@media (max-width: 1020px) {
+    .sea-container {
+        display: none;
+    }
+}
